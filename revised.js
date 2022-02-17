@@ -65,8 +65,8 @@ function doProcesstrades(tradesToProcess) {
       tradeCount++;
 
       // 1) add up prices
-      totalCostsPerCurrency['total' + trade.currency] =
-        (totalCostsPerCurrency['total' + trade.currency] || 0) +
+      totalCostsPerCurrency[`total${trade.currency}`] =
+        (totalCostsPerCurrency[`total${trade.currency}`] || 0) +
         trade.price * trade.quantity;
 
       // 2) collect unique symbols
